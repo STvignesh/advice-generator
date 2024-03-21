@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main-container {
+  max-width: 100%;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-color: hsl(218, 23%, 16%);
 }
 
-.App-link {
-  color: #61dafb;
+.advice-container-box {
+  width: 35rem;
+  min-height: 40vh;
+  background-color: blue;
+  background-color: hsl(217, 19%, 24%);
+  padding: 3rem 3rem;
+  font-family: "Manrope", sans-serif;
+  border-radius: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
+.adviceNumber {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.85rem;
+  letter-spacing: 4px;
+  color: hsl(150, 100%, 66%);
+  margin-bottom: 2rem;
+}
+.advice {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  color: hsl(193, 38%, 86%);
+}
+.logo-seperator-mobile {
+  display: none;
+}
+.logo-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  position: absolute;
+  bottom: 0;
+  background-color: rgb(82, 255, 168);
+  transform: translateY(50%);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+}
+.dice-logo {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.btn:hover,
+.dice-logo:hover {
+  cursor: pointer;
+}
+.btn:hover {
+  box-shadow: 0 0 2rem rgba(82, 255, 168, 0.8);
+}
+@media (max-width: 40em) {
+  .advice-container-box {
+    max-width: 25rem;
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+  .advice-container-box {
+    padding: 3rem 2rem;
+  }
+  .logo-seperator-mobile {
+    display: block;
+  }
+  .logo-seperator-desktop {
+    display: none;
+  }
+}
+@media (max-width: 27em) {
+  .advice-container-box {
+    max-width: 18rem;
+  }
+  .logo-seperator-mobile {
+    width: 100%;
+  }
+  .advice-container-box {
+    padding: 2.5rem 1rem;
+  }
+}
+@media (max-width: 20em) {
+  .advice-container-box {
+    max-width: 15rem;
+  }
+  .adviceNumber {
+    font-size: 0.65rem;
+  }
+  .advice {
+    font-size: 1.4rem;
+  }
+  .dice-logo {
+    width: 1.3rem;
+    height: 1.3rem;
+  }
+  .btn {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+@media (max-width: 17em) {
+  .advice-container-box {
+    max-width: 12rem;
+  }
+  .advice {
+    font-size: 1.1rem;
   }
 }
